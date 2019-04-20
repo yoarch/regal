@@ -38,7 +38,7 @@ audiopath=${4:-"/usr/share/sounds/regal/duck.wav"}
 args_to_scds $every $timemode
 
 echo -e "\n\t${BWHITE}starting regal ($(date +"%T"))\n\n\tducking every $every$timemode ...\n\n"
-
+i=1
 if [[ $howmanytime == "inf" ]]; then
 	while true
 	do
