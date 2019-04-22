@@ -1,4 +1,4 @@
-# regal!
+# regal
 a simple regular alarm for terminal
 
 a very simple terminal regular alarm in seconds/minutes/hours that will play a song and display a message every x amount of time.
