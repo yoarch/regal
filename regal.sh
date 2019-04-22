@@ -20,7 +20,10 @@ function args_to_scds {
 }
 
 function regal {
-	echo -e "$i:\t..."
+	printf "\n$i: "
+	for (( d=1; d<=$i; d++ )) do
+		printf "."
+	done
 	sleep $x_seconds
 	mpv $audiopath > /dev/null 2>&1 &
 	i=$((i+1))
