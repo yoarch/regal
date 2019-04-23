@@ -30,7 +30,7 @@ every 50 minutes for ever:<br/>
 ```sh
 regal 50 m inf ~/audio/duck_song.mp3
 ```
-every 4 hours for 4 hours:<br/>
+every hour for 4 hours:<br/>
 ```sh
 regal 1 h 4 ~/audio/duck_song.mp3
 ```
