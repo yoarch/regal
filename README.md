@@ -23,6 +23,12 @@ yay -a regal
 
 
 # examples
+for help:<br/>
+```sh
+regal -h
+or
+regal --help
+```
 every 20 seconds for ever:<br/>
 ```sh
 regal 20 s
