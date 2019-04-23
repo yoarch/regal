@@ -5,9 +5,9 @@ a very simple terminal regular alarm in seconds/minutes/hours that will play a s
 
 # installation
 ```sh
-yay -a regal
-or
 yaourt -a regal
+or
+yay -a regal
 ```
 
 # usage
