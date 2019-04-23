@@ -1,9 +1,27 @@
 #!/bin/bash
 
-if [ -z $2 ]; then
-	echo -e "\n\tneeds at least 2 args being the time and the mode\n\nfor 30 seconds enter:\nregal 30 s\n\nfor 10 minutes enter:\nregal 10 m"
-	return 1
-fi
+function check_args {
+
+	if [ "$#" -eq 1 ] && ([[ $1 == "-h" ]] || [[ $1 == "--help" ]]); then
+		cat /usr/lib/regal/README.md
+		exit 0
+	fi
+
+	if [ -z $2 ]; then
+		echo -e "\n\t${BWHITE}needs at least two arguments being the time in timemode you want the regular alarm to remind you every each period\n\tfor 2 minutes enter:\n\tregal 2 m"
+		exit 1
+	fi
+
+	if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+		echo -e "\n\t${BWHITE}first argument must be an integer being the time in timemode you want the regular alarm to remind you every each period\n\tfor 2 minutes enter:\n\tregal 2 m"
+		exit 1
+	fi
+
+	if [[ "$2" != 'h' ]] && [[ "$2" != 'm' ]] && [[ "$2" != 's' ]]; then
+		echo -e "\n\t${BWHITE}second argument must be \"h\" or \"m\" or \"s\":\n\tregal 2 m"
+		exit 1
+	fi
+}
 
 function args_to_scds {
 	x_seconds=0
@@ -32,6 +50,8 @@ function regal {
 BWHITE='\033[1m' # bold white
 NC='\033[0m' # no color
 
+check_args "$@"
+
 every=$1
 # timemode can be "h": hours, "m": minutes, "s": seconds
 timemode=$2
@@ -53,4 +73,4 @@ else
 	done
 fi
 
-echo -e "\n\tend of the repetitions ...\n"
+echo -e "\n\tend of the repetitions ...${NC}\n"
