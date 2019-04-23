@@ -18,6 +18,7 @@ yay -a regal
 <!-- -->         <b>TIME_MODE</b>        "h" for hours, "m" for minutes or "s" for seconds
 <!-- -->         <b>HOW_MANY_TIME</b>        number of repetition, must be an integer such as 42 or "inf" for ever
 <!-- -->         <b>AUDIO_PATH</b>        to play another audio than the duck one by default
+<!-- -->         <b>-h, --help</b>        show this help message and exit
 </pre>
 
 
