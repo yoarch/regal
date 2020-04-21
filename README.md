@@ -1,16 +1,16 @@
 # regal
-a simple regular alarm for terminal
+Simple CLI regular alarm
 
-a very simple terminal regular alarm in seconds/minutes/hours that will play a song and display a message every x amount of time.
+A very simple terminal regular alarm supporting seconds, minutes and hours that will play a song and display a message every x amount of time.
 
-# installation
+# Installation
 ```sh
 yaourt -a regal
 or
 yay -a regal
 ```
 
-# usage
+# Usage
 <pre>
 <b>regal</b> [EVERY_X_TIME] [TIME_MODE] [HOW_MANY_TIME] [AUDIO_PATH]
 <b>options:</b>
@@ -22,22 +22,22 @@ yay -a regal
 </pre>
 
 
-# examples
-for help:<br/>
+# Examples
+For help:<br/>
 ```sh
 regal -h
 or
 regal --help
 ```
-every 20 seconds for ever:<br/>
+Every 20 seconds for ever:<br/>
 ```sh
 regal 20 s
 ```
-every 50 minutes for ever:<br/>
+Every 50 minutes for ever:<br/>
 ```sh
 regal 50 m inf ~/audio/duck_song.mp3
 ```
-every hour for 4 hours:<br/>
+Every hour for 4 hours:<br/>
 ```sh
 regal 1 h 4 ~/audio/duck_song.mp3
 ```
