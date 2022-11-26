@@ -1,6 +1,8 @@
 # regal
 Simple CLI regular alarm
 
+This package is deprecated and will be deleted soon, instead, the [timer package](https://github.com/yoarch/timer) aims to replace it and has all the regular timer regal features available.
+
 A very simple terminal regular alarm supporting seconds, minutes and hours that will play a song and display a message every x amount of time.
 
 # Installation
